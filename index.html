@@ -1,0 +1,402 @@
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width" />
+
+        <title>Elements Assignment. Roger Nomen Giner</title>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/local/styles.css" />
+    </head>
+    <body ng-app="elementsApp" ng-controller="mainController">
+
+        <!-- HEADER -->
+        <div id="header" class="navbar navbar-fixed-top home-nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <img class="home-logo" src=https://www.elements.nl/wp-content/uploads/logo/logo-landscape.png  scroll-to="header"/>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-nav" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="header-nav" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li scroll-to="header" ng-class="{'nav-home-menu-item-selected' : homeInView == true}">HOME</li>
+                        <li scroll-to="careers" ng-class="{'nav-home-menu-item-selected' : careersInView == true}">CAREERS</li>
+                        <li scroll-to="blog" ng-class="{'nav-home-menu-item-selected' : blogInView == true}">BLOG</li>
+                        <li scroll-to="contact" ng-class="{'nav-home-menu-item-selected' : contactInView == true}">CONTACT</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOME CONTENT -->
+        <div class="container" id="home" in-view="$inview ? homeInView = true : homeInView = false">
+            <div class="row">
+                <div class="home-carousel" ng-controller="CarouselController">
+                    <div style="height: 305px">
+                        <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+                            <uib-slide ng-repeat="slide in slides" active="slide.active">
+                                <img ng-src="{{slide.image}}" style="margin:auto;">
+                                <div class="carousel-caption">
+                                    <p class="smallTitle" ng-bind="slide.title"></p>
+                                    <h1 class="bigTitle" ng-bind="slide.subtitle"></h1>
+                                    <a href="{{slide.actionUrl}}" class="btn btn-primary" ng-bind="slide.action"></a>
+                                </div>
+                            </uib-slide>
+                        </uib-carousel>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-lg-12 col-xs-12 text-center">
+                        <h2 class="greyTitle">Creating rock solid applications for web and mobile</h2>
+                        <h3 class="greyTitle titleSeparator">Great projects for relevant companies</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center ipsum-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                        faucibus a sit amet odio. Donec eleifend nibh a neque cursus, vitae aliquam elit scelerisque.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    </div>
+                </div>
+
+                <div class="row companies" ng-controller="CompaniesController">
+                    <div ng-repeat="company in companies" ng-if="$index % 3 == 0" class="row">
+                        <div class="col-lg-4 single-company" ng-if="companies[$index].logo">
+                            <a href="{{companies[$index].website}}" target="_blank">
+                                <div class="img-responsive logo-hexagon">
+                                    <img class="logo" src="{{companies[$index].logo}}" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 single-company" ng-if="companies[$index +1].logo">
+                            <a href="{{companies[$index +1].website}}" target="_blank">
+                                <div class="logo-hexagon img-responsive">
+                                    <img class="logo" src="{{companies[$index +1].logo}}" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 single-company" ng-if="companies[$index +2].logo">
+                            <a href="{{companies[$index +2].website}}" target="_blank">
+                                <div class="logo-hexagon img-responsive">
+                                    <img class="logo" src="{{companies[$index +2].logo}}" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAREERS CONTENT -->
+        <div class="container text-center" id="careers" in-view="$inview ? careersInView = true : careersInView = false">
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="greyTitle titleSeparator">Join magnificent and fun team</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center ipsum-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                        faucibus a sit amet odio. Donec eleifend nibh a neque cursus, vitae aliquam elit scelerisque.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    </div>
+                </div>
+
+                <div class="row city" id="about">
+                    <div class="col-lg-12 city-image">
+                        <div class="bcn">
+                            <div class="city-logo">
+                                <div class="logo-bcn"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="city-name">
+                            <h1>Barcelona, ES</h1>
+                        </div>
+                    </div>
+
+                    <div class="row city-info">
+                        <div class="col-lg-4 column-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                            faucibus a sit amet odio.</div>
+                        <div class="col-lg-4 column-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                            faucibus a sit amet odio.</div>
+                        <div class="col-lg-4 column-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                            faucibus a sit amet odio.</div>
+                    </div>
+                </div>
+
+                <div class="row city">
+                    <div class="col-lg-12 city-image">
+                        <div class="alm">
+                            <div class="city-logo">
+                                <div class="logo-alm"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="city-name">
+                            <h1>Almere, NL</h1>
+                        </div>
+                    </div>
+
+                    <div class="row city-info">
+                        <div class="col-lg-4 column-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                            faucibus a sit amet odio.</div>
+                        <div class="col-lg-4 column-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                            faucibus a sit amet odio.</div>
+                        <div class="col-lg-4 column-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                            faucibus a sit amet odio.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOG CONTENT -->
+        <div class="container text-center" id="blog" in-view="$inview ? blogInView = true : blogInView = false">
+            <div class="page-content" ng-controller="BlogCommentController">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="greyTitle titleSeparator">Blog: Great apps and webs for all!</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center ipsum-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                        faucibus a sit amet odio. Donec eleifend nibh a neque cursus, vitae aliquam elit scelerisque.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    </div>
+                </div>
+
+                <div class="row post">
+                    <div class="row">
+                        <div class="col-lg-12 post-img">
+                            <div class="gradient">
+                                <div class="post-title-content">
+                                    <div class="post-title text-left">
+                                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                                    </div>
+                                    <div class="post-subtitle text-left">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                                        faucibus a sit amet odio. Donec eleifend nibh a neque cursus, vitae aliquam elit scelerisque.
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row post-content">
+                        <div class="col-lg-6 text-left">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                            faucibus a sit amet odio. Donec eleifend nibh a neque cursus, vitae aliquam elit scelerisque.
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                            faucibus a sit amet odio. Donec eleifend nibh a neque cursus, vitae aliquam elit scelerisque.
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                                faucibus a sit amet odio. Donec eleifend nibh a neque cursus, vitae aliquam elit scelerisque.
+                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        </div>
+                        <div class="col-lg-6 hidden-xs">
+                            <div class="iphone-img">
+                                <img src="assets/img/blog/iphone-device.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row post-content-footer">
+                        <div class="col-lg-6 post-footer-image">
+                            <img src="assets/img/blog/developers-analyzing.jpg" />
+                        </div>
+                        <div class="col-lg-6 post-footer-image">
+                            <img src="assets/img/blog/developers-analyzing.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="greyTitle titleSeparator">Leave a comment</h3>
+                    </div>
+                </div>
+
+                <div class="row form-comment-wrapper text-left" ng-hide="commentInserted">
+                    <form name="formPostComment" ng-submit="BlogSaveComment(formPostComment)" novalidate>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>Name<span class="required-form"></span></label>
+                                <input type="text" name="commentName" ng-model="commentName" class="form-control" placeholder="Place your name here..." required ng-class="{'input_error' : formPostComment.$submitted && formPostComment.commentName.$invalid}">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Email<span class="required-form"></span></label>
+                                <input type="email" name="commentEmail" ng-model="commentEmail" class="form-control" placeholder="username@company.com" required ng-class="{'input_error' : formPostComment.$submitted && formPostComment.commentEmail.$invalid}">
+                            </div>
+                        </div>
+                        <div class="row mTop20">
+                            <div class="col-lg-12">
+                                <label>Comment<span class="required-form"></span></label>
+                                <textarea rows="8" name="commentComment" ng-model="commentComment" class="form-control" placeholder="Place your comment here..." required ng-class="{'input_error' : formPostComment.$submitted && formPostComment.commentComment.$invalid}"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mTop20" ng-show="formPostComment.$submitted && formPostComment.$invalid">
+                            <div class="col-lg-12">
+                                <div class="alert alert-danger">All inputs are required </div>
+                            </div>
+                        </div>
+
+                        <div class="row text-center mTop20">
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-default">Submit comment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="row" ng-show="commentInserted">
+                    <div class="col-lg-12 text-center">
+                        <h3>Your comment is saved.</h3>
+                    </div>
+                </div>
+
+                <div class="row post-footer text-left">
+                    <div class="row">
+                        <div class="col-lg-2 post-footer-username">Username</div>
+                        <div class="col-lg-10 post-footer-date">November 2, 2015</div>
+                    </div>
+                    <div class="row mTop20">
+                        <div class="col-lg-12 post-footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                            faucibus a sit amet odio. Donec eleifend nibh a neque cursus, vitae aliquam elit scelerisque.
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT CONTENT -->
+        <div class="container text-center" id="contact" in-view="$inview ? contactInView = true : contactInView = false">
+            <div class="page-content" ng-controller="ContactFormController">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="greyTitle titleSeparator">Let's talk and go on!</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center ipsum-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus in felis ullamcorper
+                        faucibus a sit amet odio. Donec eleifend nibh a neque cursus, vitae aliquam elit scelerisque.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    </div>
+                </div>
+
+                <div class="row contact-form-wrapper mTop20 text-left">
+                    <div class="contact-form-img-pattern"></div>
+                    <div class="row">
+                        <h1>Send us a message</h1>
+                        <p><span class="required-form"></span>Required fields</p>
+                    </div>
+
+                    <div class="row" ng-controller="ContactFormController">
+                        <form novalidate name="contactForm" ng-submit="sendContactForm(contactForm)" class="contact-form mTop50">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <label class="contactForm-required-label">Name<span class="required-form"></span></label>
+                                    <input type="text" name="contactName" ng-model="contactName" class="form-control" placeholder="Place your name here..." required ng-class="{'input_error' : contactForm.$submitted && contactForm.contactName.$invalid}"/>
+                                </div>
+                            </div>
+                            <div class="row mTop20">
+                                <div class="col-lg-8">
+                                    <label class="contactForm-required-label">Email <span class="required-form"></span></label>
+                                    <input type="email" name="contactEmail" ng-model="contactEmail" class="form-control" placeholder="username@company.com" required ng-class="{'input_error' : contactForm.$submitted && contactForm.contactEmail.$invalid}"/>
+                                </div>
+                            </div>
+                            <div class="row mTop20">
+                                <div class="col-lg-8">
+                                    <label class="contactForm-required-label">Telephone <span class="required-form"></span></label>
+                                    <input type="text" name="contactTelephone" ng-model="contactTelephone" class="form-control" placeholder="Place your telephone number here..." required ng-class="{'input_error' : contactForm.$submitted && contactForm.contactTelephone.$invalid}"/>
+                                </div>
+                            </div>
+                            <div class="row mTop20">
+                                <div class="col-lg-9">
+                                    <label class="contactForm-required-label">Message <span class="required-form"></span></label>
+                                    <textarea rows="10" name="contactMessage" ng-model="contactMessage" class="form-control" placeholder="Place your message here..." required ng-class="{'input_error' : contactForm.$submitted && contactForm.contactMessage.$invalid}"></textarea>
+                                </div>
+                            </div>
+                            <div class="row mTop20">
+                                <div class="col-lg-12 text-left">
+                                    <button type="submit" class="btn btn-default">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="alert alert-danger" ng-show="errorContactForm && contactForm.$submitted">Unable to send your message</div>
+                        <div class="alert alert-success" ng-show="successContactForm && contactForm.$submitted">Your message has been sent</div>
+                        <div class="alert alert-danger" ng-show="contactForm.$invalid && contactForm.$submitted">All inputs are required</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="footer">
+            <div class="container">
+                <div class="row footer-pattern"></div>
+                <div class="navbar footer-nav">
+                    <div class="col-lg-3 footer-logo">
+                        &copy; ELEMENTS INTERACTIVE
+                    </div>
+                    <div class="col-lg-9 footer-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li scroll-to="header" class="col-xs-2">HOME</li>
+                            <li scroll-to="careers" class="col-xs-2">CAREERS</li>
+                            <li scroll-to="about" class="col-xs-2">ABOUT</li>
+                            <li scroll-to="blog" class="col-xs-2">BLOG</li>
+                            <li scroll-to="contact" class="col-xs-2">CONTACT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- JQUERY -->
+        <script type="text/javascript" src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+
+        <!-- LESS -->
+        <script src="less.js" type="text/javascript" data-relative-urls="true"></script>
+
+        <!-- BOOTSTRAP -->
+        <script type="text/javascript" src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <!-- ANGULAR JS -->
+        <!-- VENDOR MODULES -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-inview.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/ngAnimate.js"></script>
+        <!--<script type="text/javascript" src="assets/js/vendor/angular.min.js"></script>-->
+        <script type="text/javascript" src="assets/js/vendor/angular-route.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/ui-bootstrap-tpls-0.14.3.min.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-smooth-scroll.js"></script>
+
+        <!-- LOCAL MODULES -->
+        <script type="text/javascript" src="assets/js/local/mainController.js"></script>
+        <script type="text/javascript" src="assets/js/local/home/controllers.js"></script>
+        <script type="text/javascript" src="assets/js/local/home/services.js"></script>
+        <script type="text/javascript" src="assets/js/local/blog/controllers.js"></script>
+        <script type="text/javascript" src="assets/js/local/blog/services.js"></script>
+        <script type="text/javascript" src="assets/js/local/contact/controllers.js"></script>
+        <script type="text/javascript" src="assets/js/local/contact/services.js"></script>
+        <script type="text/javascript" src="assets/js/local/app.js"></script>
+    </body>
+</html>

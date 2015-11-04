@@ -1,0 +1,354 @@
+body {
+  padding-top: 70px;
+}
+.icon-bar {
+  background-color: black;
+}
+.titleSeparator {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.titleSeparator::before {
+  content: "";
+  width: 300px;
+  border-bottom: 2px solid #FB007F;
+  position: absolute;
+  margin: 0 auto;
+  bottom: -20px;
+  text-align: center;
+  display: inline-block;
+  right: 0;
+  left: 0;
+}
+.btn-default {
+  border-color: #FB007F;
+  background-color: #FB007F;
+  color: white;
+  font-weight: bold;
+}
+.btn-default:focus {
+  background-color: #FB007F;
+  color: white;
+  font-weight: bold;
+}
+.btn-default:hover {
+  background-color: #FB007F;
+  color: white;
+}
+.nav-home-menu-item-selected {
+  color: #FB007F !important;
+}
+.page-content {
+  padding-left: 160px;
+  padding-right: 160px;
+}
+.mTop100 {
+  margin-top: 100px;
+}
+.mTop50 {
+  margin-top: 50px;
+}
+.required-form {
+  background-image: url('../../img/blog/form-required-icon.png');
+  width: 10px;
+  display: inline-block;
+  height: 10px;
+  margin: 0 5px 0 5px;
+}
+.mTop20 {
+  margin-top: 20px;
+}
+.input_error {
+  border-color: #FB007F;
+}
+.noPadding {
+  padding: 0;
+}
+.home-nav li {
+  cursor: pointer;
+}
+.ipsum-text {
+  margin-bottom: 60px;
+}
+form label > span {
+  margin-top: -17px !important;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+.home-nav {
+  background-color: white;
+  padding-top: 20px;
+}
+.home-nav li {
+  margin: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #5b6270;
+}
+.home-nav li:hover {
+  color: #c3c3c3;
+}
+.home-logo {
+  width: 150px;
+  cursor: pointer;
+}
+.home-carousel {
+  height: 400px;
+}
+.carousel-caption {
+  padding-bottom: 100px;
+}
+.carousel-caption .smallTitle {
+  font-family: 'Open Sans';
+  margin-bottom: 0px;
+}
+.carousel-caption .bigTitle {
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+  font-size: 60px;
+}
+.carousel-caption .btn {
+  background-color: #c2202e;
+  border-color: transparent;
+}
+.companies .logo-hexagon {
+  background-image: url('../../img/company-logo-frame.png');
+  position: relative;
+  display: block;
+  background-size: 220px 265px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 290px;
+}
+.companies .logo-hexagon:hover .logo {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  z-index: 10;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1.3, M12=-1.3, M21=1.3, M22=1.3);
+}
+.companies .logo {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 90px;
+}
+.greyTitle {
+  font-weight: bold;
+  color: grey;
+}
+.redLine {
+  border-bottom: 1px solid red;
+  width: 100px;
+}
+.city-image {
+  height: 545px;
+  padding-bottom: 20px;
+  position: relative;
+  margin-bottom: 100px;
+}
+.bcn {
+  background-image: url("../../img/careers/bcn-city.png");
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.alm {
+  background-image: url('../../img/careers/almere-city.png');
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+.city-logo {
+  margin: 0 auto;
+}
+.city-logo .logo-bcn {
+  background-image: url('../../img/careers/bcn-logo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  height: 240px;
+  width: 100%;
+  bottom: -90px;
+}
+.city-logo .logo-alm {
+  background-image: url('../../img/careers/almere-logo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  height: 240px;
+  width: 100%;
+  bottom: -90px;
+}
+.city-name h1 {
+  font-weight: bold;
+}
+.city-info {
+  margin: 50px 0 100px 0;
+}
+.city-info .column-info:first-child {
+  border-right: 1px solid #cccccc;
+}
+.city-info .column-info:last-child {
+  border-left: 1px solid #cccccc;
+}
+.post {
+  margin-top: 50px;
+}
+.post-img {
+  background-image: url('../../img/blog/device-lab-testing.jpg');
+  width: 100%;
+  height: 400px;
+  display: block;
+  padding: 0;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+.gradient {
+  background: -webkit-linear-gradient(left, rgba(255, 0, 0, 0), #ff0000);
+  /*Safari 5.1-6*/
+  background: -o-linear-gradient(right, rgba(255, 0, 0, 0), #ff0000);
+  /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right, rgba(255, 0, 0, 0), #ff0000);
+  /*Fx 3.6-15*/
+  background: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(3, 0, 0, 0.68));
+  /*Standard*/
+  position: absolute;
+  height: 100%;
+}
+.post-title-content {
+  margin: 100px 0 0 50px;
+  width: 70%;
+  color: #ffffff;
+}
+.post-content {
+  margin-top: 20px;
+}
+#blog .iphone-img {
+  position: absolute;
+  top: -90px;
+  left: 20px;
+}
+#blog .post-footer-image > img {
+  width: 100%;
+}
+#blog .iphone-img > img {
+  height: 380px;
+}
+#blog .post-footer {
+  border-top: 2px solid #FB007F;
+  padding-top: 20px;
+}
+#blog .post-footer-username {
+  color: #FB007F;
+  font-weight: bold;
+}
+.contact-form-wrapper {
+  background-color: #E4E4E4;
+  height: auto;
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px;
+}
+.contact-form-img-pattern {
+  background-image: url('../../img/contact/elements-pattern.png');
+  width: 136px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+#footer {
+  margin-top: 100px;
+}
+.footer-pattern {
+  background-image: url('../../img/footer/elements-footer-pattern.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 197px;
+}
+.footer-logo {
+  font-size: 12px;
+}
+.footer-nav {
+  min-height: 10px;
+  margin: 0;
+}
+.footer-menu li {
+  font-size: 12px;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+}
+/********************/
+/****MEDIA QUERYS****/
+/********************/
+@media all and (max-width: 599px) and (min-width: 320px) {
+  .home-carousel {
+    height: 150px;
+  }
+  .carousel-caption .smallTitle {
+    font-size: 8px;
+  }
+  .carousel-caption .bigTitle {
+    font-size: 18px;
+  }
+  .page-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .carousel-caption {
+    padding: 0;
+  }
+  .carousel-indicators {
+    bottom: -10px;
+  }
+  .home-nav {
+    padding-top: 5px;
+    padding-left: 6px;
+  }
+  .post-title-content {
+    margin: 30px 0px 0px 50px;
+  }
+  .post-footer-image {
+    margin-bottom: 20px;
+  }
+  .companies {
+    margin-left: 20px;
+  }
+  .single-company {
+    margin-bottom: 30px;
+  }
+  .city-info .column-info {
+    margin-bottom: 20px;
+  }
+  .city-info .column-info:first-child {
+    border: 0;
+  }
+  .city-info .column-info:last-child {
+    border: 0;
+  }
+  .footer-pattern {
+    height: 87px;
+  }
+}

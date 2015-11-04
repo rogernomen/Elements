@@ -1,0 +1,96 @@
+@url-relative: "../../img/";
+@primary-color : #FB007F;
+
+body {
+  padding-top: 70px;
+}
+
+.icon-bar {
+  background-color: black;
+}
+
+.titleSeparator {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.titleSeparator::before {
+  content:"";
+  width: 300px;
+  border-bottom:2px solid @primary-color;
+  position:absolute;
+  margin: 0 auto;
+  bottom: -20px;
+  text-align: center;
+  display: inline-block;
+  right: 0;
+  left: 0;
+}
+
+.btn-default {
+  border-color : @primary-color;
+  background-color: @primary-color;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-default:focus {
+    background-color: @primary-color;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-default:hover {
+    background-color: @primary-color;
+    color: white;
+}
+
+.nav-home-menu-item-selected {
+  color: @primary-color !important;
+}
+
+.page-content {
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+.mTop100 {
+  margin-top: 100px;
+}
+
+.mTop50 {
+  margin-top : 50px;
+}
+
+.required-form {
+  background-image: url('@{url-relative}blog/form-required-icon.png');
+  width: 10px;
+  display: inline-block;
+  height: 10px;
+  margin: 0 5px 0 5px;
+}
+
+.mTop20 {
+  margin-top: 20px;
+}
+
+.input_error {
+  border-color: @primary-color;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.home-nav li {
+  cursor: pointer;
+}
+
+.ipsum-text {
+  margin-bottom: 60px;
+}
+
+form label > span {
+  margin-top: -17px !important;
+}

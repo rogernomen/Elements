@@ -1,0 +1,79 @@
+@import url('global.less');
+@import url('retina.less');
+@import url('fonts.less');
+
+@import url('header/header.less');
+@import url('home/home.less');
+@import url('careers/careers.less');
+@import url('blog/blog.less');
+@import url('contact/contact.less');
+@import url('footer/footer.less');
+
+
+/********************/
+/****MEDIA QUERYS****/
+/********************/
+
+@media all and (max-width: 599px) and (min-width: 320px) {
+  .home-carousel {
+    height: 150px;
+  }
+
+  .carousel-caption .smallTitle {
+    font-size: 8px;
+  }
+
+  .carousel-caption .bigTitle {
+    font-size: 18px;
+  }
+
+  .page-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .carousel-caption {
+    padding: 0;
+  }
+
+  .carousel-indicators {
+    bottom: -10px;
+  }
+
+  .home-nav {
+    padding-top: 5px;
+    padding-left: 6px;
+  }
+
+  .post-title-content {
+    margin: 30px 0px 0px 50px;
+  }
+
+  .post-footer-image {
+    margin-bottom: 20px;
+  }
+  
+  .companies {
+    margin-left: 20px;
+  }
+
+  .single-company {
+    margin-bottom: 30px;
+  }
+
+  .city-info .column-info{
+    margin-bottom: 20px;
+  }
+
+  .city-info .column-info:first-child {
+    border: 0;
+  }
+  .city-info .column-info:last-child {
+    border: 0;
+  }
+
+  .footer-pattern {
+    height: 87px;
+  }
+
+}
